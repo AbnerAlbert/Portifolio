@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfólio — Abner Albert</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:       #0D0F14;
+  --bg2:      #13161D;
+  --bg3:      #1A1E28;
+  --border:   #222736;
+  --accent:   #3B82F6;
+  --accent2:  #06B6D4;
+  --text:     #E8EAF0;
+  --muted:    #6B7280;
+  --subtle:   #9CA3AF;
+  --white:    #FFFFFF;
+  --green:    #10B981;
+  --tag-bg:   #1E2433;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.4;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(13,15,20,0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--text); }
+#hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero-glow {
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-glow2 {
+  position: absolute;
+  bottom: -100px; left: -100px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(6,182,212,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  margin-bottom: 1.5rem;
+}
+.hero-eyebrow::before {
+  content: '';
+  display: block;
+  width: 24px; height: 1px;
+  background: var(--accent2);
+}
+h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+h1 span {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-sub {
+  font-size: 1.15rem;
+  color: var(--subtle);
+  max-width: 520px;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+}
+.htag {
+  padding: 0.35rem 0.85rem;
+  background: var(--tag-bg);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--subtle);
+  letter-spacing: 0.03em;
+}
+.hero-contact {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.contact-item {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+.contact-item strong { color: var(--subtle); }
+section {
+  padding: 6rem 0;
+  border-top: 1px solid var(--border);
+}
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 3rem;
+}
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+p { color: var(--subtle); font-weight: 300; max-width: 680px; }
+.comp-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-top: 2rem;
+}
+.comp-card {
+  background: var(--bg2);
+  padding: 2rem;
+  transition: background 0.2s;
+}
+.comp-card:hover { background: var(--bg3); }
+.comp-card h3 {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  margin-bottom: 1.2rem;
+}
+.comp-items { list-style: none; }
+.comp-items li {
+  font-size: 0.88rem;
+  color: var(--subtle);
+  padding: 0.35rem 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+.comp-items li:last-child { border-bottom: none; }
+.comp-items li::before {
+  content: '▸';
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+  font-size: 0.7rem;
+}
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin: 2rem 0;
+}
+.split-block {
+  background: var(--bg2);
+  padding: 2rem;
+}
+.split-block .label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+.split-block p { font-size: 0.9rem; max-width: 100%; }
+.arch-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin: 2rem 0;
+}
+.arch-cell {
+  background: var(--bg2);
+  padding: 1.25rem;
+  transition: background 0.2s;
+}
+.arch-cell:hover { background: var(--bg3); }
+.arch-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--border);
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+.arch-cell h4 {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.4rem;
+}
+.arch-cell p { font-size: 0.78rem; color: var(--muted); max-width: 100%; }
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin: 2rem 0;
+}
+.status-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  font-size: 0.8rem;
+  color: var(--subtle);
+}
+.status-pill::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+  flex-shrink: 0;
+}
+.evidence-item { margin: 3rem 0; }
+.evidence-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+.fig-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.evidence-header h3 { font-size: 1rem; margin-bottom: 0; }
+.evidence-desc {
+  font-size: 0.84rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+  max-width: 100%;
+}
+.screenshot {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  transition: border-color 0.2s, transform 0.3s;
+}
+.screenshot:hover {
+  border-color: rgba(59,130,246,0.3);
+  transform: scale(1.005);
+}
+.fig-caption {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+.diff-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+  margin-top: 2rem;
+}
+.diff-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.9rem 1rem;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  font-size: 0.85rem;
+  color: var(--subtle);
+  transition: border-color 0.2s, color 0.2s;
+}
+.diff-item:hover { border-color: rgba(59,130,246,0.25); color: var(--text); }
+.diff-item::before {
+  content: '▸';
+  color: var(--accent);
+  flex-shrink: 0;
+  font-size: 0.7rem;
+  margin-top: 0.15rem;
+}
+.objetivo-box {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  padding: 2rem 2.5rem;
+  margin-top: 2rem;
+}
+.objetivo-box p { font-size: 0.95rem; max-width: 100%; margin-bottom: 1rem; }
+.objetivo-box p:last-child { margin-bottom: 0; }
+#contato { padding-bottom: 8rem; }
+.contato-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-top: 2rem;
+}
+.contato-cell { background: var(--bg2); padding: 1.5rem; }
+.contato-cell .label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+  display: block;
+}
+.contato-cell a, .contato-cell span {
+  font-size: 0.9rem;
+  color: var(--accent2);
+  text-decoration: none;
+  font-weight: 400;
+}
+.contato-cell a:hover { color: var(--white); }
+footer {
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+  position: relative;
+  z-index: 1;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { opacity: 0; animation: fadeUp 0.7s ease forwards; }
+.fade-up:nth-child(1) { animation-delay: 0.1s; }
+.fade-up:nth-child(2) { animation-delay: 0.2s; }
+.fade-up:nth-child(3) { animation-delay: 0.35s; }
+.fade-up:nth-child(4) { animation-delay: 0.5s; }
+.fade-up:nth-child(5) { animation-delay: 0.65s; }
+.exp-item {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.exp-item:last-child { border-bottom: none; }
+.exp-period {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  padding-top: 0.15rem;
+}
+.exp-role { font-size: 1rem; font-weight: 600; color: var(--white); font-family: 'Syne', sans-serif; margin-bottom: 0.15rem; }
+.exp-company { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.6rem; }
+.exp-desc { font-size: 0.9rem; color: var(--subtle); max-width: 100%; }
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-top: 2rem;
+}
+.form-card { background: var(--bg2); padding: 1.75rem; }
+.form-card .label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+  display: block;
+}
+.form-card h3 { font-size: 0.95rem; margin-bottom: 0.3rem; }
+.form-card p { font-size: 0.82rem; color: var(--muted); max-width: 100%; }
+@media (max-width: 680px) {
+  .comp-grid, .split, .diff-grid, .contato-grid, .form-grid { grid-template-columns: 1fr; }
+  .arch-grid { grid-template-columns: repeat(2, 1fr); }
+  .status-grid { grid-template-columns: repeat(2, 1fr); }
+  .exp-item { grid-template-columns: 1fr; gap: 0.4rem; }
+  .nav-links { display: none; }
+  h1 { font-size: 2.8rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo">Abner Albert</span>
+  <ul class="nav-links">
+    <li><a href="#apresentacao">Sobre</a></li>
+    <li><a href="#experiencia">Experiência</a></li>
+    <li><a href="#competencias">Competências</a></li>
+    <li><a href="#towerguard">Projeto</a></li>
+    <li><a href="#formacao">Formação</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+</nav>
+
+<section id="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="container">
+    <div class="fade-up"><div class="hero-eyebrow">Portfólio Profissional · 2026</div></div>
+    <div class="fade-up"><h1>Abner<br><span>Albert</span></h1></div>
+    <div class="fade-up">
+      <p class="hero-sub">Suporte Técnico · Redes & Telecomunicações · Analista de Dados · Fundador de IoT.<br>
+      Mais de 8 anos entre atendimento ao usuário, suporte técnico de campo e infraestrutura — hoje também à frente do meu próprio projeto de monitoramento IoT.</p>
+    </div>
+    <div class="fade-up">
+      <div class="hero-tags">
+        <span class="htag">Suporte Técnico</span>
+        <span class="htag">Redes & Telecom</span>
+        <span class="htag">Atendimento ao Cliente</span>
+        <span class="htag">IoT & Hardware</span>
+        <span class="htag">Análise de Dados</span>
+        <span class="htag">Python (FIAP)</span>
+      </div>
+    </div>
+    <div class="fade-up">
+      <div class="hero-contact">
+        <span class="contact-item"><strong>Local:</strong> Salvador, BA</span>
+        <span class="contact-item"><strong>Email:</strong> abner_albert16@hotmail.com</span>
+        <span class="contact-item"><strong>Tel:</strong> (71) 98423-4972</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="apresentacao">
+  <div class="container">
+    <div class="section-label">Apresentação</div>
+    <h2>Do atendimento ao usuário<br>à infraestrutura técnica.</h2>
+    <p style="margin-bottom:1rem">Minha trajetória combina mais de 8 anos de atendimento ao público (setor financeiro, transporte público e telecomunicações), suporte técnico de campo com instalação de hardware, e operação de NOC com análise de indicadores e validação de laudos de infraestrutura.</p>
+    <p>Estou concluindo o curso superior em Análise de Sistemas de Computação e sou fundador do TowerGuard, projeto próprio de monitoramento IoT para corrosão atmosférica — onde defino arquitetura, hardware e requisitos técnicos do sistema. É essa combinação entre vivência prática de suporte e visão técnica de sistemas que trago para qualquer time.</p>
+  </div>
+</section>
+
+<section id="experiencia">
+  <div class="container">
+    <div class="section-label">Experiência Profissional</div>
+    <h2>Trajetória.</h2>
+    <div class="exp-item">
+      <div class="exp-period">Jan 2026 — Presente</div>
+      <div>
+        <div class="exp-role">Fundador</div>
+        <div class="exp-company">TowerGuard · Salvador, BA</div>
+        <p class="exp-desc">Projeto próprio de IoT para monitoramento de corrosão atmosférica em torres de infraestrutura. Responsável pela definição de arquitetura, hardware (sensores, nós ESP32 LoRa, gateway 4G) e requisitos técnicos do sistema, do sensor ao dashboard.</p>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-period">Jul 2025 — Jan 2026</div>
+      <div>
+        <div class="exp-role">Assistente de Qualidade PL</div>
+        <div class="exp-company">Nova Corrente · Salvador, BA</div>
+        <p class="exp-desc">Organização de documentos técnicos e relatórios fotográficos. Identificação, registro e acompanhamento de não conformidades, propondo ações corretivas junto às equipes de engenharia e execução.</p>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-period">Mai 2024 — Jul 2025</div>
+      <div>
+        <div class="exp-role">Analista de Dados</div>
+        <div class="exp-company">STTE — Serviços Técnicos em Telecomunicações · Salvador, BA</div>
+        <p class="exp-desc">Serviços de NOC para infraestrutura de telecom: validação de laudos técnicos, relatórios e suporte a técnico de campo. Monitoramento de indicadores e gestão de rotina de qualidade preventiva.</p>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-period">Out 2021 — Nov 2023</div>
+      <div>
+        <div class="exp-role">Consultor de Atendimento ao Cliente</div>
+        <div class="exp-company">Vivo (Telefônica Brasil) · Salvador, BA</div>
+        <p class="exp-desc">Atendimento ao cliente em contexto de telecomunicações, resolução de solicitações e suporte a usuários finais.</p>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-period">Mar 2021 — Set 2021</div>
+      <div>
+        <div class="exp-role">Auxiliar Técnico</div>
+        <div class="exp-company">Max Forte · Salvador, BA</div>
+        <p class="exp-desc">Instalação e manutenção de sistemas de CFTV e alarmes, configuração de portaria eletrônica.</p>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-period">Fev 2018 — Abr 2020</div>
+      <div>
+        <div class="exp-role">Recepcionista</div>
+        <div class="exp-company">SalvadorCard – SETPS · Salvador, BA</div>
+        <p class="exp-desc">Atendimento ao público, confecção de cartões de transporte público e recargas.</p>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-period">Out 2014 — Fev 2017</div>
+      <div>
+        <div class="exp-role">Atendimento ao Cliente</div>
+        <div class="exp-company">Contax S.A. · Salvador, BA</div>
+        <p class="exp-desc">Atendimento ao cliente no setor financeiro e suporte geral a produtos de cartão de crédito.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="competencias">
+  <div class="container">
+    <div class="section-label">Competências</div>
+    <h2>Onde atuo bem.</h2>
+    <div class="comp-grid">
+      <div class="comp-card">
+        <h3>Suporte & Atendimento</h3>
+        <ul class="comp-items">
+          <li>Atendimento técnico e comercial a usuários finais</li>
+          <li>Triagem e resolução de solicitações</li>
+          <li>Comunicação clara com público não técnico</li>
+          <li>Gestão de rotina operacional de suporte</li>
+        </ul>
+      </div>
+      <div class="comp-card">
+        <h3>Redes & Infraestrutura</h3>
+        <ul class="comp-items">
+          <li>Formação técnica em Redes de Sistemas e Telecomunicações</li>
+          <li>Suporte a técnico de campo e validação de laudos (NOC)</li>
+          <li>Configuração de rede para dispositivos IoT (Wi-Fi, LoRa, gateway 4G)</li>
+          <li>Instalação e manutenção de CFTV, alarmes e portaria eletrônica</li>
+        </ul>
+      </div>
+      <div class="comp-card">
+        <h3>Dados & Qualidade</h3>
+        <ul class="comp-items">
+          <li>Monitoramento de indicadores e KPIs de infraestrutura</li>
+          <li>Gestão de qualidade preventiva e não conformidades</li>
+          <li>Documentação técnica e relatórios fotográficos</li>
+          <li>Python (certificação FIAP)</li>
+        </ul>
+      </div>
+      <div class="comp-card">
+        <h3>Hardware & IoT</h3>
+        <ul class="comp-items">
+          <li>Especificação e arquitetura de sistema IoT (TowerGuard)</li>
+          <li>Integração de sensores, ESP32 e gateways LoRa/4G</li>
+          <li>Prototipagem e validação em campo</li>
+          <li>Especificação técnica de sistemas com apoio de ferramentas de IA</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="towerguard">
+  <div class="container">
+    <div class="section-label">Projeto em Destaque</div>
+    <h2>TowerGuard</h2>
+    <p style="margin-bottom:2rem">Monitoramento contínuo de agressividade ambiental para infraestrutura. Substituição da observação pontual por leitura estruturada, baseada em evidência e orientada à decisão.</p>
+    <div class="split">
+      <div class="split-block">
+        <span class="label">Problema</span>
+        <p>Em contextos operacionais, o acompanhamento das condições ambientais costuma ser fragmentado e reativo: inspeções esporádicas, sem histórico contínuo, sem capacidade de antecipação.</p>
+      </div>
+      <div class="split-block">
+        <span class="label">Solução</span>
+        <p>O TowerGuard converte dados ambientais e sinais correlatos em base contínua de monitoramento — transformando observação pontual em leitura interpretável e orientada à decisão.</p>
+      </div>
+    </div>
+    <h3 style="margin-top:3rem;margin-bottom:0.5rem;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);font-family:Syne,sans-serif">Arquitetura da Solução</h3>
+    <div class="arch-grid">
+      <div class="arch-cell"><div class="arch-num">01</div><h4>Coleta</h4><p>Variáveis ambientais e sinais proxy em campo</p></div>
+      <div class="arch-cell"><div class="arch-num">02</div><h4>Transmissão</h4><p>Comunicação distribuída com backend próprio</p></div>
+      <div class="arch-cell"><div class="arch-num">03</div><h4>Backend</h4><p>Recebimento, tratamento e persistência de dados</p></div>
+      <div class="arch-cell"><div class="arch-num">04</div><h4>Visualização</h4><p>Dashboard analítico com indicadores operacionais</p></div>
+      <div class="arch-cell"><div class="arch-num">05</div><h4>Interpretação</h4><p>Análise de tendência e recomendação via ARGUS Copilot</p></div>
+    </div>
+    <h3 style="margin-top:3rem;margin-bottom:0.5rem;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);font-family:Syne,sans-serif">Estágio Atual</h3>
+    <div class="status-grid">
+      <div class="status-pill">Problema e proposta de valor definidos</div>
+      <div class="status-pill">Arquitetura estruturada e documentada</div>
+      <div class="status-pill">Backend e persistência operacionais</div>
+      <div class="status-pill">Dashboard analítico funcional</div>
+      <div class="status-pill">Integração coleta → processamento → visualização</div>
+      <div class="status-pill">Operando com dados reais em contexto real</div>
+    </div>
+  </div>
+</section>
+
+<section id="evidencias">
+  <div class="container">
+    <div class="section-label">Evidências do Sistema em Operação</div>
+    <h2>O sistema existe.<br>Aqui está a prova.</h2>
+
+    <div class="evidence-item">
+      <div class="evidence-header"><span class="fig-num">Fig. 01</span><h3>Dashboard principal — monitoramento em tempo real</h3></div>
+      <p class="evidence-desc">Painel operacional com indicadores de dano acumulado, integridade, categoria ISO 9223, umidade, temperatura e risco atual, além da matriz de trilhas condutoras e assistente ARGUS Copiloto.</p>
+      <img class="screenshot" src="images/screenshot-01.png" alt="Login TowerGuard">
+      <p class="fig-caption">Dashboard principal com KPIs, matriz de trilhas e ARGUS Copiloto</p>
+    </div>
+
+    <div class="evidence-item">
+      <div class="evidence-header"><span class="fig-num">Fig. 02</span><h3>Visão Geral — status consolidado de todos os sites</h3></div>
+      <p class="evidence-desc">Painel de síntese com leitura consolidada por ponto monitorado: pontos mapeados, risco crítico/alto, mapa de criticidade da orla e distribuição de risco por zona ISO.</p>
+      <img class="screenshot" src="images/screenshot-02.png" alt="Dashboard TowerGuard">
+      <p class="fig-caption">Visão Geral com mapa de criticidade e distribuição de risco</p>
+    </div>
+
+    <div class="evidence-item">
+      <div class="evidence-header"><span class="fig-num">Fig. 03</span><h3>Centro de Inteligência Geoespacial — mapa de corrosividade</h3></div>
+      <p class="evidence-desc">Visualização georreferenciada por faixas de corrosividade ISO 9223 (C2 a C5-M), com módulo ARGUS Geo Intelligence apontando hipótese dominante, vetores de influência e recomendação.</p>
+      <img class="screenshot" src="images/screenshot-03.png" alt="Visão Geral TowerGuard">
+      <p class="fig-caption">Mapa geoespacial de corrosividade com inteligência ARGUS</p>
+    </div>
+
+    <div class="evidence-item">
+      <div class="evidence-header"><span class="fig-num">Fig. 04</span><h3>Histórico / Alertas Ambientais — central de eventos</h3></div>
+      <p class="evidence-desc">Central de alertas com totais por severidade, linha do tempo de ocorrências, distribuição por nível de risco e lista detalhada de eventos com status de reconhecimento.</p>
+      <img class="screenshot" src="images/screenshot-04.png" alt="Mapa TowerGuard">
+      <p class="fig-caption">Histórico e central de alertas ambientais</p>
+    </div>
+
+    <div class="evidence-item">
+      <div class="evidence-header"><span class="fig-num">Fig. 05</span><h3>Relatórios — síntese técnica exportável</h3></div>
+      <p class="evidence-desc">Relatório por ambiente e período com ICA médio, integridade, tempo de molhamento e diagnóstico automático do ARGUS, exportável em PDF, HTML, CSV e JSON com hash de verificação.</p>
+      <img class="screenshot" src="images/screenshot-05.png" alt="Relatórios TowerGuard">
+      <p class="fig-caption">Relatório técnico com exportação verificável (PDF/HTML/CSV/JSON)</p>
+    </div>
+
+    <div class="evidence-item">
+      <div class="evidence-header"><span class="fig-num">Fig. 06</span><h3>Analytics — ICA histórico e risco EMA</h3></div>
+      <p class="evidence-desc">Séries temporais de ICA e risco EMA nas últimas 24h, além de gráficos de referência da placa sacrificial e evolução de TOW/precipitação ao longo de 30 dias.</p>
+      <img class="screenshot" src="images/screenshot-06.png" alt="Relatório PDF TowerGuard">
+      <p class="fig-caption">Analytics com séries históricas de ICA, risco EMA e precipitação</p>
+    </div>
+
+    <div class="evidence-item">
+      <div class="evidence-header"><span class="fig-num">Fig. 07</span><h3>Cadastro de Ambiente — onboarding assistido</h3></div>
+      <p class="evidence-desc">Fluxo guiado em 5 etapas para cadastro de novo site de monitoramento, com validação de ID, geolocalização e orientações contextuais para o operador.</p>
+      <img class="screenshot" src="images/screenshot-07.png" alt="Analytics Charts TowerGuard">
+      <p class="fig-caption">Cadastro de ambiente com fluxo assistido em etapas</p>
+    </div>
+
+    <div class="evidence-item">
+      <div class="evidence-header"><span class="fig-num">Fig. 08</span><h3>Gestão de Usuários — controle de acesso e notificações</h3></div>
+      <p class="evidence-desc">Cadastro de usuários com definição de cargo, módulos liberados e status, além de gestão de destinatários de alertas via bot do Telegram.</p>
+      <img class="screenshot" src="images/screenshot-08.png" alt="Analytics Panel TowerGuard">
+      <p class="fig-caption">Gestão de usuários e notificações via Telegram</p>
+    </div>
+
+    <div class="evidence-item">
+      <div class="evidence-header"><span class="fig-num">Fig. 09</span><h3>Manutenção do Sistema — configuração do ARGUS</h3></div>
+      <p class="evidence-desc">Painel administrativo para editar textos, variações de linguagem e limiares usados pelo ARGUS na geração automática de diagnósticos, sem necessidade de novo deploy.</p>
+      <img class="screenshot" src="images/screenshot-09.png" alt="Ocorrências TowerGuard">
+      <p class="fig-caption">Configuração administrável dos textos e limiares do ARGUS</p>
+    </div>
+
+    <div class="evidence-item">
+      <div class="evidence-header"><span class="fig-num">Fig. 10</span><h3>Detalhes das trilhas — diagnóstico por sensor</h3></div>
+      <p class="evidence-desc">Visualização individual da placa sacrificial com leitura por trilha, histórico de integridade, fatores de influência e linha de raciocínio do ARGUS até a recomendação final.</p>
+      <img class="screenshot" src="images/screenshot-10.png" alt="Usuários TowerGuard">
+      <p class="fig-caption">Diagnóstico detalhado por trilha com raciocínio do ARGUS</p>
+    </div>
+  </div>
+</section>
+
+<section id="diferenciais">
+  <div class="container">
+    <div class="section-label">Diferenciais</div>
+    <h2>O que trago para o time.</h2>
+    <p>Mais de 8 anos de experiência real de atendimento e suporte, somados a uma formação técnica e a um projeto próprio de tecnologia — uma combinação pouco comum entre vivência de campo e visão técnica.</p>
+    <div class="diff-grid">
+      <div class="diff-item">Atendimento ao público em múltiplos contextos (bancário, transporte, telecom)</div>
+      <div class="diff-item">Formação técnica formal em Redes de Telecomunicações</div>
+      <div class="diff-item">Vivência prática com instalação e manutenção de hardware (CFTV, alarmes, IoT)</div>
+      <div class="diff-item">Rotina de NOC: monitoramento de indicadores e validação de laudos</div>
+      <div class="diff-item">Disciplina de documentação e controle de qualidade</div>
+      <div class="diff-item">Iniciativa para sustentar um projeto técnico próprio do zero</div>
+      <div class="diff-item">Comunicação clara com usuários técnicos e não técnicos</div>
+      <div class="diff-item">Facilidade para aprender e se adaptar a novos sistemas</div>
+    </div>
+  </div>
+</section>
+
+<section id="formacao">
+  <div class="container">
+    <div class="section-label">Formação Acadêmica</div>
+    <h2>Base técnica.</h2>
+    <div class="form-grid">
+      <div class="form-card">
+        <span class="label">2023 — 2026</span>
+        <h3>Análise de Sistemas de Computação</h3>
+        <p>Curso Superior de Tecnologia (CST) · UNIASSELVI</p>
+      </div>
+      <div class="form-card">
+        <span class="label">2014</span>
+        <h3>Redes de Sistemas e Telecomunicações</h3>
+        <p>Curso Técnico · SENAI CIMATEC</p>
+      </div>
+      <div class="form-card">
+        <span class="label">Certificação</span>
+        <h3>Python</h3>
+        <p>FIAP</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="objetivo">
+  <div class="container">
+    <div class="section-label">Objetivo Profissional</div>
+    <h2>O que estou buscando.</h2>
+    <div class="objetivo-box">
+      <p>Busco oportunidades nas áreas de suporte técnico, TI, redes e tecnologia, onde possa aplicar minha experiência real de atendimento, minha formação técnica e minha vivência prática com hardware e sistemas IoT. Tenho interesse especial em funções que unam contato direto com o usuário e resolução técnica de problemas.</p>
+      <p>Sigo concluindo o curso de Análise de Sistemas de Computação e desenvolvendo o TowerGuard como projeto pessoal, mantendo minha atuação técnica em constante evolução.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="container">
+    <div class="section-label">Contato</div>
+    <h2>Disponível para conversar.</h2>
+    <div class="contato-grid">
+      <div class="contato-cell">
+        <span class="label">Email</span>
+        <a href="mailto:abner_albert16@hotmail.com">abner_albert16@hotmail.com</a>
+      </div>
+      <div class="contato-cell">
+        <span class="label">Telefone</span>
+        <a href="tel:+5571984234972">(71) 98423-4972</a>
+      </div>
+      <div class="contato-cell">
+        <span class="label">LinkedIn</span>
+        <a href="https://www.linkedin.com/in/abner-albert-939248296/" target="_blank">linkedin.com/in/abner-albert</a>
+      </div>
+      <div class="contato-cell">
+        <span class="label">Localização</span>
+        <span>Salvador, BA — Brasil</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>Abner Albert · Portfólio Profissional · v1.0 · 2026</span>
+</footer>
+
+</body>
+</html>
