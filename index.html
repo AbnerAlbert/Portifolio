@@ -222,6 +222,7 @@ p { color: var(--subtle); font-weight: 300; max-width: 680px; }
   transition: background 0.2s;
 }
 .comp-card:hover { background: var(--bg3); }
+.comp-card:last-child { grid-column: span 2; }
 .comp-card h3 {
   font-size: 0.82rem;
   font-weight: 700;
@@ -411,6 +412,7 @@ p { color: var(--subtle); font-weight: 300; max-width: 680px; }
   margin-top: 2rem;
 }
 .contato-cell { background: var(--bg2); padding: 1.5rem; }
+.contato-cell:last-child { grid-column: span 2; }
 .contato-cell .label {
   font-size: 0.65rem;
   font-weight: 700;
@@ -489,6 +491,7 @@ footer {
 .form-card p { font-size: 0.82rem; color: var(--muted); max-width: 100%; }
 @media (max-width: 680px) {
   .comp-grid, .split, .diff-grid, .contato-grid, .form-grid { grid-template-columns: 1fr; }
+  .comp-card:last-child, .contato-cell:last-child { grid-column: auto; }
   .arch-grid { grid-template-columns: repeat(2, 1fr); }
   .status-grid { grid-template-columns: repeat(2, 1fr); }
   .exp-item { grid-template-columns: 1fr; gap: 0.4rem; }
@@ -705,7 +708,7 @@ footer {
 <section id="evidencias">
   <div class="container">
     <div class="section-label">Evidências Técnicas</div>
-    <h2>Projeto em desenvolvimento.<br>Aqui estão as entregas.</h2>
+    <h2>TowerGuard em desenvolvimento.<br>Entregas técnicas.</h2>
 
     <div class="evidence-item">
       <div class="evidence-header"><span class="fig-num">Fig. 01</span><h3>Dashboard principal — monitoramento em tempo real</h3></div>
