@@ -1,22 +1,23 @@
-# Portfólio Técnico — Abner Albert
+# Portfólio — Abner Albert
 
-Portfólio profissional de **Abner Albert**, em transição para Desenvolvimento Júnior, com experiência operacional em telecomunicações, NOC e desenvolvimento de solução IoT.
+Portfólio profissional de **Abner Albert**, em transição para tecnologia, com experiência operacional em telecomunicações e NOC.
 
 ## Projeto em destaque: TowerGuard
 
-A TowerGuard é uma solução de monitoramento ambiental aplicada à infraestrutura de telecomunicações. O projeto conecta coleta em campo, transmissão, backend, visualização e uma camada de interpretação voltada à decisão operacional.
+A TowerGuard é uma solução de monitoramento ambiental para infraestrutura de telecomunicações. Abner atua como fundador na **concepção técnica**, especificação de requisitos, integração e validação funcional dos fluxos entre componentes.
 
-### Tecnologias e entregas
+### Escopo demonstrado
 
 - **IoT e telemetria:** ESP32, LoRa 915 MHz, sensor SHT30 e gateway 4G.
-- **Backend:** Node.js, API REST, validação de ingestão de telemetria e Server-Sent Events (SSE).
-- **Web:** dashboard em HTML, CSS e JavaScript.
-- **Mobile:** aplicação em Expo / React Native.
-- **Dados e contexto:** indicadores ambientais, séries históricas e integração climática.
+- **Fluxos validados:** comunicação sensor/gateway, ingestão de telemetria, APIs e atualizações em tempo real.
+- **Interfaces:** dashboard web e aplicativo mobile usados para demonstrar requisitos, jornadas e decisões de produto.
+- **Atuação:** requisitos técnicos, integração de componentes e testes funcionais do fluxo ponta a ponta.
 
-### Estado demonstrado neste portfólio
+### Transparência sobre a implementação
 
-A comunicação entre sensor, gateway e backend de ingestão foi validada. As telas apresentadas demonstram as interfaces, fluxos e decisões de produto; onde houver dados de demonstração, eles não devem ser interpretados como medições operacionais em produção.
+Este portfólio não apresenta as telas, APIs ou aplicativo como código desenvolvido de forma independente por Abner. As evidências mostram um projeto em desenvolvimento e seu papel na definição, acompanhamento e validação funcional da solução.
+
+Onde houver dados de demonstração, eles não devem ser interpretados como medições operacionais em produção.
 
 ## Repositório
 
