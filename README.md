@@ -1,32 +1,33 @@
 # Portfólio — Abner Albert
 
-Portfólio profissional de **Abner Albert**, em transição para tecnologia, com experiência operacional em telecomunicações e NOC.
+Aplicações web, automação de processos e IA aplicada, com experiência anterior em telecomunicações, análise de dados e qualidade operacional.
 
-## Projeto em destaque: TowerGuard
+Site: https://abneralbert.github.io/Portifolio/
 
-A TowerGuard é uma solução de monitoramento ambiental para infraestrutura de telecomunicações. Abner atua como fundador na **concepção técnica**, especificação de requisitos, integração e validação funcional dos fluxos entre componentes.
+## PraCortar
 
-### Escopo demonstrado
+Aplicação de planejamento de marcenaria com orçamento, plano de corte, montagem 3D e planta de ambiente. O projeto integra IA generativa a uma ficha técnica estruturada, validada por JSON Schema / AJV, com confirmação de medidas inferidas pelo usuário.
 
-- **IoT e telemetria:** ESP32, LoRa 915 MHz, sensor SHT30 e gateway 4G.
-- **Fluxos validados:** comunicação sensor/gateway, ingestão de telemetria, APIs e atualizações em tempo real.
-- **Interfaces:** dashboard web e aplicativo mobile usados para demonstrar requisitos, jornadas e decisões de produto.
-- **Atuação:** requisitos técnicos, integração de componentes e testes funcionais do fluxo ponta a ponta.
+Tecnologias do projeto: HTML, CSS, JavaScript, Three.js, Cloudflare Workers, Supabase, Gemini e Workers AI. Há controles de consumo e testes de regressão no repositório privado. A existência de código e testes não equivale a certificação de segurança, implantação comercial ou resultado de testes executados nesta atualização.
 
-### Transparência sobre a implementação
+A apresentação pública contém apenas uma descrição do projeto. Não publica seu código-fonte, configurações, dados de clientes ou credenciais. Cobrança recorrente é uma etapa futura.
 
-Este portfólio não apresenta as telas, APIs ou aplicativo como código desenvolvido de forma independente por Abner. As evidências mostram um projeto em desenvolvimento e seu papel na definição, acompanhamento e validação funcional da solução.
+## TowerGuard / ARGUS
 
-Onde houver dados de demonstração, eles não devem ser interpretados como medições operacionais em produção.
+Solução de monitoramento de agressividade ambiental no entorno de infraestrutura de telecomunicações: sensores, comunicação LoRa/gateway, backend, APIs, dashboard e assistência analítica ARGUS.
+
+A solução sinaliza condições ambientais e possíveis impactos futuros; não mede nem confirma corrosão ou dano na estrutura do cliente. Capturas de desenvolvimento podem incluir dados simulados. Regras e heurísticas não são apresentadas como modelos preditivos validados ou treinamento de modelos próprios.
+
+## Atuação e desenvolvimento
+
+Abner conduz a concepção, definição de requisitos, acompanhamento da implementação e avaliação funcional dos projetos. A implementação utiliza assistência de ferramentas de IA. Sua programação independente está em evolução; as tecnologias dos projetos não são apresentadas como domínio autônomo de toda a stack.
 
 ## Repositório
 
-Este repositório contém a página estática do portfólio e imagens de demonstração.
-
-Não contém firmware de produção, tokens, credenciais, configurações de rede, dados de usuários ou lógica proprietária da TowerGuard.
+Página estática e imagens de demonstração do portfólio. Sem firmware, lógica proprietária, dados de usuários ou segredos dos projetos.
 
 ## Contato
 
-- LinkedIn: [abner-albert](https://www.linkedin.com/in/abner-albert-939248296/)
 - E-mail: abner_albert16@hotmail.com
-- Localização: Salvador, BA — Brasil
+- Localização: São Paulo, SP — Brasil
+- LinkedIn: https://www.linkedin.com/in/abner-albert-939248296/
