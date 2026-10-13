@@ -541,6 +541,11 @@ section { scroll-margin-top: 100px; }
 .project-cover .project-link { position:relative; }
 @media(max-width:680px) { #trajectory-track .exp-item { flex-basis:85%; padding:1.25rem; } #evidence-track .evidence-item { padding:1rem; } #evidence-track .screenshot { height:220px; } #evidence-track .evidence-desc { min-height:0; } .carousel-controls { flex-wrap:wrap; } .project-watermark { width:210px; height:210px; } }
 
+
+.nav-links a { position:relative; display:inline-block; padding:.25rem 0; }
+.nav-links a::after { content:''; position:absolute; bottom:-.2rem; left:0; right:0; height:2px; background:var(--accent2); transform:scaleX(0); transition:transform .2s; }
+.nav-links a.is-active { color:var(--accent2); }
+.nav-links a.is-active::after { transform:scaleX(1); }
 </style>
 </head>
 <body>
@@ -594,7 +599,7 @@ section { scroll-margin-top: 100px; }
   <div class="container">
     <div class="section-label">Apresentação</div>
     <h2>Da operação de telecom<br>à construção de soluções digitais.</h2>
-    <p style="margin-bottom:1rem">Minha trajetória reúne análise de dados, qualidade operacional, NOC e atendimento em telecomunicações. Nos projetos próprios PraCortar e TowerGuard, trabalho na transformação de necessidades reais em aplicações, integrações e fluxos de automação. Sou bacharel em Fisioterapia e estudante de Análise e Desenvolvimento de Sistemas.</p>
+    <p style="margin-bottom:1rem">Minha trajetória reúne análise de dados, qualidade operacional, NOC e atendimento em telecomunicações. Nos projetos próprios PraCortar e TowerGuard, trabalho na transformação de necessidades reais em aplicações, integrações e fluxos de automação. Cursei Fisioterapia, atualmente trancada, e estou em formação em Análise e Desenvolvimento de Sistemas.</p>
     <p>Minha atuação concentra-se na concepção da solução, definição de requisitos, acompanhamento da implementação e testes funcionais. O desenvolvimento utiliza apoio de ferramentas de IA; minha base em programação está em evolução. Este portfólio mostra o que os projetos implementam e como participo de sua construção e validação.</p>
   </div>
 </section>
@@ -935,9 +940,9 @@ section { scroll-margin-top: 100px; }
         <p>Curso Técnico · SENAI CIMATEC</p>
       </div>
       <div class="form-card">
-        <span class="label">Concluído · 2023</span>
+        <span class="label">Trancada</span>
         <h3>Fisioterapia</h3>
-        <p>Bacharelado · UNINASSAU</p>
+        <p>Graduação · UNINASSAU</p>
       </div>
       <div class="form-card">
         <span class="label">Certificação</span>
@@ -954,7 +959,7 @@ section { scroll-margin-top: 100px; }
     <h2>O que estou buscando.</h2>
     <div class="objetivo-box">
       <p>Busco oportunidades em tecnologia, aplicações, automação de processos e IA aplicada, nas quais possa contribuir com definição de requisitos, análise operacional, integração e validação funcional. Minha experiência em telecomunicações e qualidade oferece contexto para transformar necessidades das equipes em soluções digitais.</p>
-      <p>PraCortar e TowerGuard demonstram minha atuação em projetos próprios com implementação assistida por IA. A formação em Fisioterapia acrescenta repertório da área da saúde, sem substituir experiência em implantação de sistemas hospitalares.</p>
+      <p>PraCortar e TowerGuard demonstram minha atuação em projetos próprios com implementação assistida por IA. </p>
     </div>
   </div>
 </section>
@@ -989,7 +994,7 @@ section { scroll-margin-top: 100px; }
 </section>
 
 <footer>
-  <span>Abner Albert · Aplicações, Automação e IA · v1.3 · 2026</span>
+  <span>Abner Albert · Aplicações, Automação e IA · v1.4 · 2026</span>
 </footer>
 
 <script>
@@ -1010,6 +1015,19 @@ document.querySelectorAll('[data-carousel]').forEach(carousel=>{
  track.addEventListener('pointerup',stop);track.addEventListener('pointercancel',stop);track.addEventListener('pointerleave',()=>{if(drag&&!drag.moved)drag=null;});
  track.addEventListener('dragstart',e=>e.preventDefault());track.addEventListener('click',e=>{if(suppress){e.preventDefault();e.stopPropagation();suppress=false;}},true);update();
 });
+</script>
+<script>
+(()=>{
+ const links=[...document.querySelectorAll('.nav-links a')];
+ const sections=links.map(link=>document.querySelector(link.getAttribute('href'))).filter(Boolean);
+ const activate=id=>links.forEach(link=>{const active=link.getAttribute('href')==='#'+id;link.classList.toggle('is-active',active);if(active)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});
+ let lockedUntil=0;
+ links.forEach(link=>link.addEventListener('click',()=>{lockedUntil=Date.now()+1000;activate(link.hash.slice(1));}));
+ const update=()=>{if(Date.now()<lockedUntil)return;const navBottom=document.querySelector('nav').getBoundingClientRect().bottom;const current=sections.filter(section=>section.getBoundingClientRect().top<=navBottom+140).pop();activate(current?current.id:'');};
+ window.addEventListener('scroll',update,{passive:true});window.addEventListener('resize',update);
+ window.addEventListener('hashchange',()=>{const id=location.hash.slice(1);if(sections.some(section=>section.id===id)){activate(id);lockedUntil=Date.now()+1000;}else update();});
+ if(location.hash&&links.some(link=>link.hash===location.hash)){activate(location.hash.slice(1));lockedUntil=Date.now()+1000;}else update();
+})();
 </script>
 </body>
 </html>
