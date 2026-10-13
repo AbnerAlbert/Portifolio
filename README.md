@@ -29,5 +29,4 @@ Página estática e imagens de demonstração do portfólio. Sem firmware, lógi
 ## Contato
 
 - E-mail: abner_albert16@hotmail.com
-- Localização: São Paulo, SP — Brasil
 - LinkedIn: https://www.linkedin.com/in/abner-albert-939248296/
