@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfólio — Abner Albert</title>
+<title>Abner Albert | Aplicações, Automação e IA</title>
+<meta name="description" content="Projetos de Abner Albert: PraCortar, aplicação de marcenaria com IA, e TowerGuard, monitoramento ambiental com telemetria e ARGUS. Produto, integração e validação funcional.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
@@ -498,6 +499,23 @@ footer {
   .nav-links { display: none; }
   h1 { font-size: 2.8rem; }
 }
+
+/* Project case studies and responsive navigation */
+:root { --muted: #9CA3AF; }
+section { scroll-margin-top: 100px; }
+.project-link { display: inline-block; margin-top: 1rem; color: var(--accent2); text-decoration: none; font-weight: 500; }
+.project-link:hover { color: var(--white); text-decoration: underline; }
+.case-flow { padding-left: 1.4rem; margin: 1.5rem 0 2rem; color: var(--subtle); }
+.case-flow li { padding: .5rem 0; }
+.case-flow strong { color: var(--text); }
+.case-note { margin: 1.5rem 0; max-width: 100%; font-size: .9rem; }
+.comp-card:last-child { grid-column: auto; }
+.form-grid { grid-template-columns: repeat(2, 1fr); }
+.nav-links { gap: 1rem; flex-wrap: wrap; }
+@media (max-width: 1000px) { nav { position: sticky; flex-wrap: wrap; gap: .7rem; } .nav-links { display: flex; gap: .75rem; } .nav-links a { font-size: .72rem; } #hero { min-height: auto; padding: 4rem 0; } }
+@media (max-width: 680px) { .form-grid { grid-template-columns: 1fr; } .container { padding: 0 1.25rem; } section { padding: 3.5rem 0; } .split-block,.comp-card { padding: 1.5rem; } nav { padding: .8rem 1.25rem; } .objetivo-box { padding: 1.5rem; } .hero-sub { font-size: 1rem; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .fade-up { opacity: 1; animation: none; } .screenshot:hover { transform: none; } }
+
 </style>
 </head>
 <body>
@@ -508,7 +526,8 @@ footer {
     <li><a href="#apresentacao">Sobre</a></li>
     <li><a href="#experiencia">Experiência</a></li>
     <li><a href="#competencias">Competências</a></li>
-    <li><a href="#towerguard">Projeto</a></li>
+    <li><a href="#projetos">Projetos</a></li>
+    <li><a href="#ia-aplicada">IA aplicada</a></li>
     <li><a href="#formacao">Formação</a></li>
     <li><a href="#contato">Contato</a></li>
   </ul>
@@ -521,11 +540,13 @@ footer {
     <div class="fade-up"><div class="hero-eyebrow">Portfólio Profissional · 2026</div></div>
     <div class="fade-up"><h1>Abner<br><span>Albert</span></h1></div>
     <div class="fade-up">
-      <p class="hero-sub">Profissional em transição para tecnologia · IoT · Telecom · Produto Técnico.<br>
-      Fundador da TowerGuard: concepção técnica, especificação de requisitos, integração e validação funcional de uma solução própria de monitoramento IoT.</p>
+      <p class="hero-sub">Aplicações web, automação de processos e IA aplicada.<br>Projetos próprios que conectam problemas operacionais a interfaces, dados e soluções funcionais: PraCortar e TowerGuard.</p>
     </div>
     <div class="fade-up">
       <div class="hero-tags">
+        <span class="htag">Aplicações Web</span>
+        <span class="htag">IA Generativa</span>
+        <span class="htag">Automação de Processos</span>
         <span class="htag">IoT & Telemetria</span>
         <span class="htag">Integração de Sistemas</span>
         <span class="htag">Validação Funcional</span>
@@ -536,7 +557,7 @@ footer {
     </div>
     <div class="fade-up">
       <div class="hero-contact">
-        <span class="contact-item"><strong>Local:</strong> Salvador, BA</span>
+        <span class="contact-item"><strong>Local:</strong> São Paulo, SP</span>
         <span class="contact-item"><strong>Email:</strong> abner_albert16@hotmail.com</span>
         <span class="contact-item"><strong>Tel:</strong> (71) 98423-4972</span>
       </div>
@@ -548,8 +569,8 @@ footer {
   <div class="container">
     <div class="section-label">Apresentação</div>
     <h2>Da operação de telecom<br>à construção de soluções digitais.</h2>
-    <p style="margin-bottom:1rem">Minha trajetória reúne operação de NOC, análise de indicadores, suporte de campo e atendimento em telecomunicações. Em paralelo, conduzo a TowerGuard: uma solução de monitoramento ambiental com telemetria IoT, interfaces web e aplicativo mobile.</p>
-    <p>Atuo na concepção técnica, especificação de requisitos, integração entre componentes e validação funcional dos fluxos. Estou em formação em Análise e Desenvolvimento de Sistemas e construindo base prática em desenvolvimento para buscar minha primeira oportunidade formal na área.</p>
+    <p style="margin-bottom:1rem">Minha trajetória reúne análise de dados, qualidade operacional, NOC e atendimento em telecomunicações. Nos projetos próprios PraCortar e TowerGuard, trabalho na transformação de necessidades reais em aplicações, integrações e fluxos de automação. Sou bacharel em Fisioterapia e estudante de Análise e Desenvolvimento de Sistemas.</p>
+    <p>Minha atuação concentra-se na concepção da solução, definição de requisitos, acompanhamento da implementação e testes funcionais. O desenvolvimento utiliza apoio de ferramentas de IA; minha base em programação está em evolução. Este portfólio mostra o que os projetos implementam e como participo de sua construção e validação.</p>
   </div>
 </section>
 
@@ -562,7 +583,7 @@ footer {
       <div>
         <div class="exp-role">Fundador</div>
         <div class="exp-company">TowerGuard · Salvador, BA</div>
-        <p class="exp-desc">Projeto próprio de IoT para monitoramento de corrosão atmosférica em torres de infraestrutura. Responsável pela definição de arquitetura, hardware (sensores, nós ESP32 LoRa, gateway 4G) e requisitos técnicos do sistema, do sensor ao dashboard.</p>
+        <p class="exp-desc">Projeto próprio de monitoramento de agressividade ambiental no entorno de infraestrutura de telecomunicações. Responsável pela definição de arquitetura, hardware (sensores, nós ESP32 LoRa, gateway 4G) e requisitos técnicos do sistema, do sensor ao dashboard.</p>
       </div>
     </div>
     <div class="exp-item">
@@ -622,9 +643,9 @@ footer {
     <h2>Atuação prática.</h2>
     <div class="comp-grid">
       <div class="comp-card">
-        <h3>Integração & Validação Funcional</h3>
+        <h3>Aplicações & Integração</h3>
         <ul class="comp-items">
-          <li>Especificação de requisitos e fluxos da TowerGuard</li>
+          <li>Definição de requisitos e jornadas de PraCortar e TowerGuard</li>
           <li>Validação da ingestão de telemetria, APIs e atualizações em tempo real</li>
           <li>Testes funcionais de dashboard web e aplicativo mobile</li>
           <li>Integração entre sensor, gateway, backend e interfaces</li>
@@ -662,17 +683,76 @@ footer {
         <ul class="comp-items">
           <li>Especificação e arquitetura de sistema IoT (TowerGuard)</li>
           <li>Integração de sensores, ESP32 e gateways LoRa/4G</li>
-          <li>Prototipagem e validação em campo</li>
+          <li>Prototipagem e testes de comunicação sensor/gateway</li>
           <li>Especificação técnica de sistemas com apoio de ferramentas de IA</li>
+        </ul>
+      </div>
+      <div class="comp-card">
+        <h3>IA & Automação Aplicada</h3>
+        <ul class="comp-items">
+          <li>Fluxos de IA generativa integrados a uma aplicação web no PraCortar</li>
+          <li>Respostas estruturadas, confirmação de medidas e revisão pelo usuário</li>
+          <li>Geração de peças, orçamento e visualização a partir de parâmetros</li>
+          <li>Desenvolvimento assistido por IA e testes funcionais das entregas</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
+<section id="projetos">
+  <div class="container">
+    <div class="section-label">Projetos próprios</div>
+    <h2>Do problema ao fluxo funcional.</h2>
+    <div class="split">
+      <div class="split-block"><span class="label">Aplicação web · IA generativa</span><h3>PraCortar</h3><p>Orçamento, plano de corte e montagem 3D para marcenaria planejada, com assistência de IA integrada ao fluxo técnico.</p><a class="project-link" href="#pracortar">Conhecer o projeto →</a></div>
+      <div class="split-block"><span class="label">IoT · Dados · Inteligência analítica</span><h3>TowerGuard / ARGUS</h3><p>Telemetria ambiental, dashboard, alertas e interpretação orientada a decisões operacionais em infraestrutura.</p><a class="project-link" href="#towerguard">Conhecer o projeto →</a></div>
+    </div>
+  </div>
+</section>
+<section id="pracortar">
+  <div class="container">
+    <div class="section-label">Estudo de caso · PraCortar</div>
+    <h2>Uma aplicação para organizar<br>o trabalho de marcenaria.</h2>
+    <p>O PraCortar reúne etapas de planejamento de móveis em uma aplicação web: configuração de módulos, geração de peças, orçamento, plano de corte, montagem 3D e planta de ambiente.</p>
+    <div class="split">
+      <div class="split-block"><span class="label">Problema trabalhado</span><p>Medidas, peças, materiais, custos e apresentação do móvel precisam permanecer coerentes ao longo do planejamento. Informações incompletas exigem confirmação antes de gerar uma proposta.</p></div>
+      <div class="split-block"><span class="label">Solução implementada no projeto</span><p>Modelos paramétricos e assistência de IA estruturam informações para os fluxos técnicos. A aplicação combina interface web, autenticação, processamento no servidor e visualização 3D.</p></div>
+    </div>
+    <h3>Fluxo de IA integrado à aplicação</h3>
+    <ol class="case-flow">
+      <li><strong>Solicitação:</strong> descrição do móvel e, quando fornecida, imagem de referência.</li>
+      <li><strong>Interpretação:</strong> integração com LLM para produzir uma resposta estruturada e ficha técnica.</li>
+      <li><strong>Validação:</strong> schemas JSON e confirmação humana das medidas inferidas.</li>
+      <li><strong>Aplicação:</strong> parâmetros alimentam geração de peças, orçamento e visualização 3D.</li>
+    </ol>
+    <div class="comp-grid">
+      <div class="comp-card"><h3>Aplicação & Dados</h3><ul class="comp-items"><li>HTML, CSS e JavaScript na interface web</li><li>Three.js para visualização e montagem 3D</li><li>Supabase para autenticação e persistência do projeto</li><li>Perfil da empresa e geração de documentos</li></ul></div>
+      <div class="comp-card"><h3>IA & Backend</h3><ul class="comp-items"><li>Cloudflare Workers e APIs em JavaScript</li><li>Integrações com Gemini e Workers AI</li><li>Validação de respostas estruturadas com JSON Schema / AJV</li><li>Controle de consumo e cotas de IA no servidor</li></ul></div>
+    </div>
+    <div class="split">
+      <div class="split-block"><span class="label">Qualidade da solução</span><p>O repositório inclui testes de regressão de módulos, unidades de medida, geometria, schemas e integração com provedores de IA. Esses artefatos demonstram verificações implementadas; não representam uma auditoria de produção.</p></div>
+      <div class="split-block"><span class="label">Minha participação</span><p>Condução do projeto, definição das necessidades e dos fluxos, acompanhamento da implementação assistida por IA e avaliação funcional das entregas. A programação independente continua em desenvolvimento.</p></div>
+    </div>
+    <p class="case-note">Status: funcionalidades documentadas e verificadas no código do projeto. Cobrança recorrente permanece como etapa futura. Demonstração pode ser combinada por contato; o código-fonte do PraCortar é privado.</p>
+    <a class="project-link" href="mailto:abner_albert16@hotmail.com?subject=Demonstra%C3%A7%C3%A3o%20do%20PraCortar">Conversar sobre o PraCortar →</a>
+  </div>
+</section>
+<section id="ia-aplicada">
+  <div class="container">
+    <div class="section-label">IA aplicada</div>
+    <h2>IA conectada ao processo.</h2>
+    <div class="split">
+      <div class="split-block"><span class="label">PraCortar · IA generativa</span><p>O modelo interpreta solicitações e auxilia na construção de uma ficha técnica. A resposta é validada e medidas inferidas precisam de confirmação antes de seguir para orçamento e visualização.</p></div>
+      <div class="split-block"><span class="label">ARGUS · Inteligência analítica</span><p>Assistente da TowerGuard que organiza indicadores ambientais, tendências e orientações. A base de interpretação utiliza regras e heurísticas; a proposta é apoiar o operador com contexto compreensível.</p></div>
+    </div>
+    <p>O foco é ligar a saída da IA a uma tarefa verificável, com regras, validação e revisão humana. Os projetos são aplicações de tecnologia existente; não são apresentados como treinamento de modelos próprios.</p>
+  </div>
+</section>
+
 <section id="towerguard">
   <div class="container">
-    <div class="section-label">Projeto em Destaque</div>
+    <div class="section-label">Estudo de caso · TowerGuard</div>
     <h2>TowerGuard</h2>
     <p style="margin-bottom:2rem">Monitoramento contínuo de agressividade ambiental para infraestrutura. Substituição da observação pontual por leitura estruturada, baseada em evidência e orientada à decisão.</p>
     <div class="split">
@@ -685,6 +765,7 @@ footer {
         <p>O TowerGuard converte dados ambientais e sinais correlatos em base contínua de monitoramento — transformando observação pontual em leitura interpretável e orientada à decisão.</p>
       </div>
     </div>
+    <p class="case-note">A TowerGuard sinaliza agressividade ambiental e possíveis impactos futuros. Não mede nem confirma corrosão ou dano na estrutura do cliente.</p>
     <h3 style="margin-top:3rem;margin-bottom:0.5rem;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);font-family:Syne,sans-serif">Arquitetura da Solução</h3>
     <div class="arch-grid">
       <div class="arch-cell"><div class="arch-num">01</div><h4>Coleta</h4><p>Variáveis ambientais e sinais proxy em campo</p></div>
@@ -709,74 +790,75 @@ footer {
   <div class="container">
     <div class="section-label">Evidências de Produto</div>
     <h2>TowerGuard em desenvolvimento.<br>Interfaces e fluxos validados.</h2>
+    <p class="case-note">Capturas de desenvolvimento: podem conter dados simulados e valores de demonstração. Indicadores de integridade e dano se referem ao sensor ou proxy; não comprovam a condição física da torre. Telas não demonstram implantação comercial nem desempenho preditivo validado.</p>
 
     <div class="evidence-item">
       <div class="evidence-header"><span class="fig-num">Fig. 01</span><h3>Dashboard principal — monitoramento em tempo real</h3></div>
-      <p class="evidence-desc">Painel operacional com indicadores de dano acumulado, integridade, categoria ISO 9223, umidade, temperatura e risco atual, além da matriz de trilhas condutoras e assistente ARGUS Copiloto.</p>
-      <img class="screenshot" src="images/screenshot-01.png" alt="Login TowerGuard">
+      <p class="evidence-desc">Painel de desenvolvimento com indicadores ambientais, condições das trilhas do sensor, referências à ISO 9223, umidade, temperatura e assistente ARGUS Copiloto.</p>
+      <img loading="lazy" class="screenshot" src="images/screenshot-01.png" alt="Dashboard principal da TowerGuard">
       <p class="fig-caption">Dashboard principal com KPIs, matriz de trilhas e ARGUS Copiloto</p>
     </div>
 
     <div class="evidence-item">
       <div class="evidence-header"><span class="fig-num">Fig. 02</span><h3>Visão Geral — status consolidado de todos os sites</h3></div>
       <p class="evidence-desc">Painel de síntese com leitura consolidada por ponto monitorado: pontos mapeados, risco crítico/alto, mapa de criticidade da orla e distribuição de risco por zona ISO.</p>
-      <img class="screenshot" src="images/screenshot-02.png" alt="Dashboard TowerGuard">
+      <img loading="lazy" class="screenshot" src="images/screenshot-02.png" alt="Visão geral dos ambientes TowerGuard">
       <p class="fig-caption">Visão Geral com mapa de criticidade e distribuição de risco</p>
     </div>
 
     <div class="evidence-item">
       <div class="evidence-header"><span class="fig-num">Fig. 03</span><h3>Centro de Inteligência Geoespacial — mapa de corrosividade</h3></div>
       <p class="evidence-desc">Visualização georreferenciada por faixas de corrosividade ISO 9223 (C2 a C5-M), com módulo ARGUS Geo Intelligence apontando hipótese dominante, vetores de influência e recomendação.</p>
-      <img class="screenshot" src="images/screenshot-03.png" alt="Visão Geral TowerGuard">
+      <img loading="lazy" class="screenshot" src="images/screenshot-03.png" alt="Mapa de inteligência geoespacial">
       <p class="fig-caption">Mapa geoespacial de corrosividade com inteligência ARGUS</p>
     </div>
 
     <div class="evidence-item">
       <div class="evidence-header"><span class="fig-num">Fig. 04</span><h3>Histórico / Alertas Ambientais — central de eventos</h3></div>
       <p class="evidence-desc">Central de alertas com totais por severidade, linha do tempo de ocorrências, distribuição por nível de risco e lista detalhada de eventos com status de reconhecimento.</p>
-      <img class="screenshot" src="images/screenshot-04.png" alt="Mapa TowerGuard">
+      <img loading="lazy" class="screenshot" src="images/screenshot-04.png" alt="Central de alertas ambientais">
       <p class="fig-caption">Histórico e central de alertas ambientais</p>
     </div>
 
     <div class="evidence-item">
       <div class="evidence-header"><span class="fig-num">Fig. 05</span><h3>Relatórios — síntese técnica exportável</h3></div>
       <p class="evidence-desc">Relatório por ambiente e período com ICA médio, integridade, tempo de molhamento e diagnóstico automático do ARGUS, exportável em PDF, HTML, CSV e JSON com hash de verificação.</p>
-      <img class="screenshot" src="images/screenshot-05.png" alt="Relatórios TowerGuard">
+      <img loading="lazy" class="screenshot" src="images/screenshot-05.png" alt="Relatórios TowerGuard">
       <p class="fig-caption">Relatório técnico com exportação verificável (PDF/HTML/CSV/JSON)</p>
     </div>
 
     <div class="evidence-item">
       <div class="evidence-header"><span class="fig-num">Fig. 06</span><h3>Analytics — ICA histórico e risco EMA</h3></div>
       <p class="evidence-desc">Séries temporais de ICA e risco EMA nas últimas 24h, além de gráficos de referência da placa sacrificial e evolução de TOW/precipitação ao longo de 30 dias.</p>
-      <img class="screenshot" src="images/screenshot-06.png" alt="Relatório PDF TowerGuard">
+      <img loading="lazy" class="screenshot" src="images/screenshot-06.png" alt="Séries temporais e analytics">
       <p class="fig-caption">Analytics com séries históricas de ICA, risco EMA e precipitação</p>
     </div>
 
     <div class="evidence-item">
       <div class="evidence-header"><span class="fig-num">Fig. 07</span><h3>Cadastro de Ambiente — onboarding assistido</h3></div>
       <p class="evidence-desc">Fluxo guiado em 5 etapas para cadastro de novo site de monitoramento, com validação de ID, geolocalização e orientações contextuais para o operador.</p>
-      <img class="screenshot" src="images/screenshot-07.png" alt="Analytics Charts TowerGuard">
+      <img loading="lazy" class="screenshot" src="images/screenshot-07.png" alt="Cadastro de ambiente">
       <p class="fig-caption">Cadastro de ambiente com fluxo assistido em etapas</p>
     </div>
 
     <div class="evidence-item">
       <div class="evidence-header"><span class="fig-num">Fig. 08</span><h3>Gestão de Usuários — controle de acesso e notificações</h3></div>
       <p class="evidence-desc">Cadastro de usuários com definição de cargo, módulos liberados e status, além de gestão de destinatários de alertas via bot do Telegram.</p>
-      <img class="screenshot" src="images/screenshot-08.png" alt="Analytics Panel TowerGuard">
+      <img loading="lazy" class="screenshot" src="images/screenshot-08.png" alt="Gestão de usuários">
       <p class="fig-caption">Gestão de usuários e notificações via Telegram</p>
     </div>
 
     <div class="evidence-item">
       <div class="evidence-header"><span class="fig-num">Fig. 09</span><h3>Manutenção do Sistema — configuração do ARGUS</h3></div>
       <p class="evidence-desc">Painel administrativo para editar textos, variações de linguagem e limiares usados pelo ARGUS na geração automática de diagnósticos, sem necessidade de novo deploy.</p>
-      <img class="screenshot" src="images/screenshot-09.png" alt="Ocorrências TowerGuard">
+      <img loading="lazy" class="screenshot" src="images/screenshot-09.png" alt="Configuração administrativa do ARGUS">
       <p class="fig-caption">Configuração administrável dos textos e limiares do ARGUS</p>
     </div>
 
     <div class="evidence-item">
       <div class="evidence-header"><span class="fig-num">Fig. 10</span><h3>Detalhes das trilhas — diagnóstico por sensor</h3></div>
       <p class="evidence-desc">Visualização individual da placa sacrificial com leitura por trilha, histórico de integridade, fatores de influência e linha de raciocínio do ARGUS até a recomendação final.</p>
-      <img class="screenshot" src="images/screenshot-10.png" alt="Usuários TowerGuard">
+      <img loading="lazy" class="screenshot" src="images/screenshot-10.png" alt="Detalhes das trilhas do sensor">
       <p class="fig-caption">Diagnóstico detalhado por trilha com raciocínio do ARGUS</p>
     </div>
   </div>
@@ -786,14 +868,14 @@ footer {
   <div class="container">
     <div class="section-label">Diferenciais</div>
     <h2>O que trago para o time.</h2>
-    <p>Mais de 8 anos de experiência real de atendimento e suporte, somados a uma formação técnica e a um projeto próprio de tecnologia — uma combinação pouco comum entre vivência de campo e visão técnica.</p>
+    <p>Mais de 8 anos de experiência real de atendimento e suporte, somados a uma formação técnica e a projetos próprios de tecnologia — uma combinação pouco comum entre vivência de campo e visão técnica.</p>
     <div class="diff-grid">
       <div class="diff-item">Atendimento ao público em múltiplos contextos (bancário, transporte, telecom)</div>
       <div class="diff-item">Formação técnica formal em Redes de Telecomunicações</div>
       <div class="diff-item">Vivência prática com instalação e manutenção de hardware (CFTV, alarmes, IoT)</div>
       <div class="diff-item">Rotina de NOC: monitoramento de indicadores e validação de laudos</div>
       <div class="diff-item">Disciplina de documentação e controle de qualidade</div>
-      <div class="diff-item">Iniciativa para sustentar um projeto técnico próprio do zero</div>
+      <div class="diff-item">Iniciativa para conduzir projetos próprios a partir de problemas operacionais</div>
       <div class="diff-item">Comunicação clara com usuários técnicos e não técnicos</div>
       <div class="diff-item">Facilidade para aprender e se adaptar a novos sistemas</div>
     </div>
@@ -816,6 +898,11 @@ footer {
         <p>Curso Técnico · SENAI CIMATEC</p>
       </div>
       <div class="form-card">
+        <span class="label">Concluído · 2023</span>
+        <h3>Fisioterapia</h3>
+        <p>Bacharelado · UNINASSAU</p>
+      </div>
+      <div class="form-card">
         <span class="label">Certificação</span>
         <h3>Python</h3>
         <p>FIAP</p>
@@ -829,8 +916,8 @@ footer {
     <div class="section-label">Objetivo Profissional</div>
     <h2>O que estou buscando.</h2>
     <div class="objetivo-box">
-      <p>Busco minha primeira oportunidade formal como Desenvolvedor Júnior, em um time que valorize aprendizado prático, acompanhamento de implementação e integração de sistemas. Minha experiência prévia em telecomunicações e NOC complementa essa transição com visão operacional, análise de dados e disciplina de documentação.</p>
-      <p>Na TowerGuard, atuo como fundador na concepção técnica, especificação de requisitos, integração e validação funcional de uma solução IoT para transformar um problema operacional em uma solução digital.</p>
+      <p>Busco oportunidades em tecnologia, aplicações, automação de processos e IA aplicada, nas quais possa contribuir com definição de requisitos, análise operacional, integração e validação funcional. Minha experiência em telecomunicações e qualidade oferece contexto para transformar necessidades das equipes em soluções digitais.</p>
+      <p>PraCortar e TowerGuard demonstram minha atuação em projetos próprios com implementação assistida por IA. A formação em Fisioterapia acrescenta repertório da área da saúde, sem substituir experiência em implantação de sistemas hospitalares.</p>
     </div>
   </div>
 </section>
@@ -850,22 +937,22 @@ footer {
       </div>
       <div class="contato-cell">
         <span class="label">LinkedIn</span>
-        <a href="https://www.linkedin.com/in/abner-albert-939248296/" target="_blank">linkedin.com/in/abner-albert</a>
+        <a href="https://www.linkedin.com/in/abner-albert-939248296/" target="_blank" rel="noopener noreferrer">linkedin.com/in/abner-albert</a>
       </div>
       <div class="contato-cell">
         <span class="label">GitHub</span>
-        <a href="https://github.com/AbnerAlbert/Portifolio" target="_blank">github.com/AbnerAlbert/Portifolio</a>
+        <a href="https://github.com/AbnerAlbert/Portifolio" target="_blank" rel="noopener noreferrer">github.com/AbnerAlbert/Portifolio</a>
       </div>
       <div class="contato-cell">
         <span class="label">Localização</span>
-        <span>Salvador, BA — Brasil</span>
+        <span>São Paulo, SP — Brasil</span>
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <span>Abner Albert · Portfólio Técnico · v1.1 · 2026</span>
+  <span>Abner Albert · Aplicações, Automação e IA · v1.2 · 2026</span>
 </footer>
 
 </body>
