@@ -531,15 +531,15 @@ section { scroll-margin-top: 100px; }
 #trajectory-track .exp-item { flex:0 0 320px; display:flex; flex-direction:column; gap:1rem; margin:0; padding:1.5rem; border:1px solid var(--border); background:var(--bg2); scroll-snap-align:start; min-width:0; }
 #trajectory-track .exp-item:last-child { border:1px solid var(--border); }
 #trajectory-track .exp-desc { font-size:.88rem; }
-#evidence-track .evidence-item { flex:0 0 100%; min-width:0; margin:0; padding:1.5rem; background:var(--bg2); border:1px solid var(--border); scroll-snap-align:start; }
-#evidence-track .evidence-header { flex-wrap:wrap; gap:.5rem 1rem; }
-#evidence-track .evidence-desc { min-height:3.5em; }
-#evidence-track .screenshot { height:360px; object-fit:contain; background:var(--bg); transform:none; }
+:is(#evidence-track, #pracortar-track) .evidence-item { flex:0 0 100%; min-width:0; margin:0; padding:1.5rem; background:var(--bg2); border:1px solid var(--border); scroll-snap-align:start; }
+:is(#evidence-track, #pracortar-track) .evidence-header { flex-wrap:wrap; gap:.5rem 1rem; }
+:is(#evidence-track, #pracortar-track) .evidence-desc { min-height:3.5em; }
+:is(#evidence-track, #pracortar-track) .screenshot { height:360px; object-fit:contain; background:var(--bg); transform:none; }
 .project-cover { position:relative; overflow:hidden; isolation:isolate; min-height:285px; }
 .project-watermark { position:absolute; right:-15px; bottom:-25px; width:240px; height:240px; object-fit:contain; opacity:.18; z-index:-1; pointer-events:none; }
 .project-cover::after { content:''; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,rgba(19,22,29,.85),rgba(19,22,29,.15)); }
 .project-cover .project-link { position:relative; }
-@media(max-width:680px) { #trajectory-track .exp-item { flex-basis:85%; padding:1.25rem; } #evidence-track .evidence-item { padding:1rem; } #evidence-track .screenshot { height:220px; } #evidence-track .evidence-desc { min-height:0; } .carousel-controls { flex-wrap:wrap; } .project-watermark { width:210px; height:210px; } }
+@media(max-width:680px) { #trajectory-track .exp-item { flex-basis:85%; padding:1.25rem; } :is(#evidence-track, #pracortar-track) .evidence-item { padding:1rem; } :is(#evidence-track, #pracortar-track) .screenshot { height:220px; } :is(#evidence-track, #pracortar-track) .evidence-desc { min-height:0; } .carousel-controls { flex-wrap:wrap; } .project-watermark { width:210px; height:210px; } }
 
 
 .nav-links a { position:relative; display:inline-block; padding:.25rem 0; }
@@ -774,6 +774,10 @@ section { scroll-margin-top: 100px; }
     <a class="project-link" href="mailto:abner_albert16@hotmail.com?subject=Demonstra%C3%A7%C3%A3o%20do%20PraCortar">Conversar sobre o PraCortar →</a>
   </div>
 </section>
+<section id="galeria-pracortar"><div class="container"><div class="section-label">PraCortar · Evidências de produto</div><h2>Aplicação em uso.</h2><p class="case-note">Capturas de um projeto simulado, sem dados de clientes. A galeria mostra orçamento, corte, detalhamento técnico 2D e a interface do assistente.</p><div class="carousel" data-carousel><div class="carousel-controls"><span class="carousel-hint">Arraste para explorar</span><div class="carousel-actions"><button class="carousel-arrow" type="button" data-dir="-1" aria-label="Anterior: imagens PraCortar" aria-controls="pracortar-track">←</button><span class="carousel-count" aria-live="polite">1 / 4</span><button class="carousel-arrow" type="button" data-dir="1" aria-label="Próximo: imagens PraCortar" aria-controls="pracortar-track">→</button></div></div><div id="pracortar-track" class="carousel-track" role="region" aria-label="Imagens PraCortar" tabindex="0"><div class="evidence-item"><div class="evidence-header"><span class="fig-num">Tela 1</span><h3>Orçamento e cálculo automático</h3></div><p class="evidence-desc">Materiais, ferragens, fita de borda e margem de lucro em um projeto simulado.</p><a href="images/pracortar-orcamento-demo.jpg" target="_blank" rel="noopener noreferrer" aria-label="Ampliar: Orçamento e cálculo automático"><img loading="lazy" class="screenshot" src="images/pracortar-orcamento-demo.jpg" alt="Orçamento e cálculo automático no PraCortar"></a><p class="fig-caption">Captura real do aplicativo · dados de demonstração · clique para ampliar</p></div>
+<div class="evidence-item"><div class="evidence-header"><span class="fig-num">Tela 2</span><h3>Plano de corte em chapa</h3></div><p class="evidence-desc">Distribuição das peças do exemplo, com medidas, kerf e aproveitamento da chapa.</p><a href="images/pracortar-corte-demo.jpg" target="_blank" rel="noopener noreferrer" aria-label="Ampliar: Plano de corte em chapa"><img loading="lazy" class="screenshot" src="images/pracortar-corte-demo.jpg" alt="Plano de corte em chapa no PraCortar"></a><p class="fig-caption">Captura real do aplicativo · dados de demonstração · clique para ampliar</p></div>
+<div class="evidence-item"><div class="evidence-header"><span class="fig-num">Tela 3</span><h3>Detalhamento técnico do móvel</h3></div><p class="evidence-desc">Vista técnica 2D e acompanhamento da montagem de um armário aéreo de demonstração.</p><a href="images/pracortar-montagem-demo.jpg" target="_blank" rel="noopener noreferrer" aria-label="Ampliar: Detalhamento técnico do móvel"><img loading="lazy" class="screenshot" src="images/pracortar-montagem-demo.jpg" alt="Detalhamento técnico do móvel no PraCortar"></a><p class="fig-caption">Captura real do aplicativo · dados de demonstração · clique para ampliar</p></div>
+<div class="evidence-item"><div class="evidence-header"><span class="fig-num">Tela 4</span><h3>Estúdio e interpretação de descrição</h3></div><p class="evidence-desc">Interface do assistente reconhecendo um módulo conhecido e suas medidas no exemplo.</p><a href="images/pracortar-assistente-demo.jpg" target="_blank" rel="noopener noreferrer" aria-label="Ampliar: Estúdio e interpretação de descrição"><img loading="lazy" class="screenshot" src="images/pracortar-assistente-demo.jpg" alt="Estúdio e interpretação de descrição no PraCortar"></a><p class="fig-caption">Captura real do aplicativo · dados de demonstração · clique para ampliar</p></div></div></div><a class="project-link" href="https://pracortar.pracortarweb.workers.dev/" target="_blank" rel="noopener noreferrer">Abrir PraCortar →</a></div></section>
 <section id="ia-aplicada">
   <div class="container">
     <div class="section-label">IA aplicada</div>
@@ -994,7 +998,7 @@ section { scroll-margin-top: 100px; }
 </section>
 
 <footer>
-  <span>Abner Albert · Aplicações, Automação e IA · v1.4 · 2026</span>
+  <span>Abner Albert · Aplicações, Automação e IA · v1.5 · 2026</span>
 </footer>
 
 <script>
