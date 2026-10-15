@@ -1,4 +1,4 @@
-# Portfólio — Abner Albert
+# Portfólio | Abner Albert
 
 Aplicações web, automação de processos e IA aplicada, com experiência anterior em telecomunicações, análise de dados e qualidade operacional.
 
