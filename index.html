@@ -666,6 +666,27 @@ h2,h3,h4 { text-wrap:balance; }
 .split-block>.label,.form-card>.label,.contato-cell>.label { display:block;width:100%; }
 .motion-toolbar { flex-wrap:wrap; }
 
+
+.guided-demo { margin-top:1.75rem;border:1px solid var(--border);border-radius:12px;background:var(--bg2);overflow:hidden; }
+.demo-steps { display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--border);border-bottom:1px solid var(--border); }
+.demo-step { background:var(--bg2);border:0;min-height:92px;padding:1rem;text-align:left;color:var(--subtle);font:inherit;font-size:.88rem;cursor:pointer;line-height:1.4; }
+.demo-step span { display:block;color:#dfb783;font-size:.75rem;margin-bottom:.4rem; }
+.demo-step.is-selected { background:#33291f;color:#fff;box-shadow:inset 0 -3px #dba466; }
+.demo-step:hover { background:#25252b; }
+.demo-step:focus-visible { outline:2px solid var(--accent2);outline-offset:-4px; }
+.demo-description { padding:1.5rem 1.5rem 1rem; }
+.demo-counter { display:block;color:#dfb783;font-size:.75rem;margin-bottom:.5rem; }
+.demo-copy { max-width:100%;min-height:3.5em;font-size:.95rem; }
+.demo-figure { padding:0 1.5rem; }
+.demo-image-link { display:block;text-decoration:none; }
+.demo-image { display:block;width:100%;height:auto;background:#f8f4eb;border-radius:6px;border:1px solid var(--border); }
+.demo-figure figcaption { margin-top:.6rem;font-size:.78rem;color:var(--muted); }
+.demo-note { margin:1rem 1.5rem 1.5rem;font-size:.82rem;max-width:none; }
+.decision-note { margin-top:1.25rem;padding:1.25rem 1.5rem;border-left:2px solid #dba466;background:rgba(219,164,102,.04); }
+.decision-note h3 { font-size:1rem; }
+.decision-note p { max-width:100%;font-size:.9rem; }
+@media(max-width:680px) { .demo-steps { grid-template-columns:repeat(2,minmax(0,1fr)); }.demo-step { min-height:82px;padding:.85rem; }.demo-description { padding:1rem; }.demo-figure { padding:0 .75rem; }.demo-copy { min-height:0; }.demo-note { margin:1rem; }.decision-note { padding:1rem; } }
+
 </style>
 </head>
 <body>
@@ -785,6 +806,37 @@ h2,h3,h4 { text-wrap:balance; }
     <p class="case-note"><strong class="note-label">Situação do projeto</strong>As funcionalidades apresentadas estão documentadas no código. A cobrança recorrente está prevista para uma etapa futura. O código-fonte é privado, e uma demonstração pode ser agendada por contato.</p>
     <a class="project-link" href="mailto:abner_albert16@hotmail.com?subject=Demonstra%C3%A7%C3%A3o%20do%20PraCortar">Conversar sobre o PraCortar →</a>
   </div>
+</section>
+
+
+<section id="demonstracao-pracortar">
+ <div class="container">
+  <div class="section-label">PraCortar em produção</div>
+  <h2>Acompanhe um projeto real de teste</h2>
+  <p>Veja as etapas executadas na versão publicada do PraCortar. As telas pertencem ao mesmo projeto de demonstração, sem informações de clientes.</p>
+  <div class="guided-demo" data-production-demo>
+   <div class="demo-steps" role="group" aria-label="Etapas da demonstração do PraCortar">
+    <button type="button" class="demo-step is-selected" data-step="0" aria-pressed="true"><span>01</span>Definir o módulo</button>
+    <button type="button" class="demo-step" data-step="1" aria-pressed="false"><span>02</span>Gerar as peças</button>
+    <button type="button" class="demo-step" data-step="2" aria-pressed="false"><span>03</span>Conferir o orçamento</button>
+    <button type="button" class="demo-step" data-step="3" aria-pressed="false"><span>04</span>Consultar o corte</button>
+   </div>
+   <div class="demo-description" aria-live="polite" aria-atomic="true">
+    <span class="demo-counter">Etapa 1 de 4</span>
+    <h3 class="demo-title">Definir o módulo</h3>
+    <p class="demo-copy">Modelo escolhido: aéreo de cozinha com duas portas. Medidas de 80 cm de largura, 70 cm de altura e 33 cm de profundidade, em MDF de 18 mm.</p>
+   </div>
+   <figure class="demo-figure">
+    <a class="demo-image-link" href="images/pracortar-producao-modulo.jpg" target="_blank" rel="noopener noreferrer" aria-label="Ampliar captura da etapa selecionada">
+     <img class="demo-image" src="images/pracortar-producao-modulo.jpg" loading="lazy" width="1125" height="920" alt="Configuração real do módulo aéreo no PraCortar">
+     <span class="image-zoom-label">Ampliar tela</span>
+    </a>
+    <figcaption>Capturas da versão publicada em 15 de outubro de 2026. Dados de teste.</figcaption>
+   </figure>
+   <p class="demo-note">A navegação apresenta capturas reais, sem recalcular ou simular resultados no portfólio. Os preços dependem dos materiais e parâmetros cadastrados na conta. A fabricação exige conferência técnica.</p>
+  </div>
+  <div class="decision-note"><h3>Uma decisão de produto</h3><p>Manter as medidas editáveis e orientar a conferência das peças geradas. O próprio aplicativo informa que os módulos são simplificados e precisam ser revisados antes da fabricação.</p></div>
+ </div>
 </section>
 
 <section id="galeria-pracortar"><div class="container"><div class="section-label">PraCortar em uso</div><h2>Aplicação em uso</h2><p class="case-note">Capturas de um projeto simulado, sem dados de clientes. A galeria mostra orçamento, corte, detalhamento técnico 2D e a interface do assistente.</p><div class="carousel" data-carousel><div class="carousel-controls"><span class="carousel-hint">Arraste para explorar</span><div class="carousel-actions"><button class="carousel-arrow" type="button" data-dir="-1" aria-label="Anterior: imagens PraCortar" aria-controls="pracortar-track">←</button><span class="carousel-count" aria-live="polite">1 / 4</span><button class="carousel-arrow" type="button" data-dir="1" aria-label="Próximo: imagens PraCortar" aria-controls="pracortar-track">→</button></div></div><div id="pracortar-track" class="carousel-track" role="region" aria-label="Imagens PraCortar" tabindex="0"><div class="evidence-item"><div class="evidence-header"><span class="fig-num">Tela 1</span><h3>Orçamento e cálculo automático</h3></div><p class="evidence-desc">Materiais, ferragens, fita de borda e margem de lucro em um projeto simulado.</p><a href="images/pracortar-orcamento-demo.jpg?v=20261013-clean" target="_blank" rel="noopener noreferrer" aria-label="Ampliar: Orçamento e cálculo automático"><img loading="lazy" class="screenshot" src="images/pracortar-orcamento-demo.jpg?v=20261013-clean" alt="Orçamento e cálculo automático no PraCortar"><span class="image-zoom-label">↗ Clique para ampliar</span></a><p class="fig-caption">Captura do aplicativo com dados de demonstração.</p></div>
@@ -1190,7 +1242,28 @@ document.querySelectorAll('[data-carousel]').forEach(carousel=>{
  else scenes.forEach(scene=>scene.classList.add('is-in-view'));
 })();
 </script>
+<script>
+(()=>{
+ const root=document.querySelector('[data-production-demo]');
+ const steps=[
+ {title:'Definir o módulo',image:'modulo',alt:'Configuração real do módulo aéreo no PraCortar',copy:'Modelo escolhido: aéreo de cozinha com duas portas. Medidas de 80 cm de largura, 70 cm de altura e 33 cm de profundidade, em MDF de 18 mm.'},
+ {title:'Gerar as peças',image:'pecas',alt:'Lista real de peças geradas para o módulo aéreo',copy:'O aplicativo gerou seis linhas de peças, totalizando oito unidades: duas laterais, um tampo, uma base, um fundo, uma prateleira e duas portas. Os campos permanecem editáveis.'},
+ {title:'Conferir o orçamento',image:'orcamento',alt:'Cálculo real de custos e preço sugerido no PraCortar',copy:'Neste exemplo, o produto calculou R$ 344,78 de custo total e R$ 482,69 de preço sugerido, com percentual de 40% sobre o custo e sem horas de mão de obra. O valor final pode ser editado pelo usuário.'},
+ {title:'Consultar o corte',image:'corte',alt:'Plano de corte real das oito peças em uma chapa de MDF',copy:'O plano exibiu oito cortes retos em uma chapa de 275 × 185 cm, aproveitamento de 46% e espessura de serra de 0,3 cm. O próprio produto orienta conferir o plano antes da fabricação.'}
+ ];
+ root.querySelectorAll('[data-step]').forEach(button=>button.addEventListener('click',()=>{
+  const index=Number(button.dataset.step),step=steps[index];
+  root.querySelectorAll('[data-step]').forEach(b=>{const active=b===button;b.classList.toggle('is-selected',active);b.setAttribute('aria-pressed',String(active));});
+  root.querySelector('.demo-counter').textContent='Etapa '+(index+1)+' de '+steps.length;
+  root.querySelector('.demo-title').textContent=step.title;
+  root.querySelector('.demo-copy').textContent=step.copy;
+  const image=root.querySelector('.demo-image');image.src='images/pracortar-producao-'+step.image+'.jpg';image.alt=step.alt;
+  root.querySelector('.demo-image-link').href=image.src;
+ }));
+})();
+</script>
 </body>
 </html>
+
 
 
