@@ -690,6 +690,15 @@ h2,h3,h4 { text-wrap:balance; }
 
 .demo-launch { display:block;width:fit-content;padding:.7rem 1rem;border:1px solid var(--accent2);border-radius:6px;color:var(--accent2);font-size:.9rem;line-height:1.5; }
 .demo-launch:hover { background:var(--bg3);text-decoration:none; }
+
+/* Navigation and contact targets on narrow screens */
+@media (max-width:680px) {
+ nav { align-items:flex-start; }
+ .nav-links { width:100%; min-width:0; max-width:100%; flex-wrap:nowrap; overflow-x:auto; gap:1rem; padding-bottom:.15rem; scrollbar-width:thin; }
+ .nav-links li { flex:0 0 auto; }
+ .nav-links a { display:inline-flex; align-items:center; min-height:44px; padding:.5rem .15rem; font-size:.76rem; white-space:nowrap; }
+ .contato-cell a { display:inline-flex; align-items:center; min-height:44px; max-width:100%; overflow-wrap:anywhere; }
+}
 </style>
 </head>
 <body>
